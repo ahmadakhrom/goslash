@@ -1,0 +1,56 @@
+{{define "view-user"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <p style="padding: 10px;">
+        <a href="/user/list"> << back </a> <br>
+        <a href="/user/insert">++new user</a> | <a href="/user/list">list user</a>
+    </p>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" name="id" value="{{.resUser.Id}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="{{.resUser.Name}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" value="{{.resUser.Username}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td><input type="text" name="username" value="{{.resUser.Role}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td><input type="text" name="status" value="{{.resUser.Status}}" disabled></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>{{.resform}}</td>
+            </tr>
+
+        </table>
+
+
+    </form>
+    </html>
+{{end}}
+
+
+
+
+
+
+
+
+
+
+
+

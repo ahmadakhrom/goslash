@@ -1,0 +1,38 @@
+{{define "list-user"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <p style="padding: 10px;">
+        <a href="/"> << back to home</a> <br>
+        <a href="/user/insert">++new user</a> | <a href="/user/delete-all">--delete all user</a>
+
+    </p>
+    <table>
+        <tr>
+            <td>Id |</td>
+            <td>Name |</td>
+            <td>Username |</td>
+            <td>Status |</td>
+            <td>Role |</td>
+            <td>date register |</td>
+            <td>Action</td>
+        </tr>
+        {{range .}}
+            <tr>
+                <td>{{.Id}} |</td>
+                <td>{{.Name}} |</td>
+                <td>{{.Username}} |</td>
+                <td>{{.Status}} |</td>
+                <td>{{.Role}} |</td>
+                <td>{{.CreatedAt}} |</td>
+                <td><a href="/user/{{.Id}}">view</a> | <a href="/user/edit/{{.Id}}">edit</a> |<a
+                            href="/user/delete/{{.Id}}">delete</a></td>
+            </tr>
+        {{end}}
+    </table>
+    </html>
+{{end}}

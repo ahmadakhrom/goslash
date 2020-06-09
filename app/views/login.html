@@ -1,0 +1,25 @@
+{{define "login"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="padding: 10px;">
+    <a href="/user/list"> << back </a> <br>
+    <a href="/user/insert">++new user</a> | <a href="/user/list">list user</a>
+</p>
+
+<h3>Login</h3>
+<form action="/login/auth">
+    Username : <input type="text" name="Username"> <br>
+    Password : <input type="password" name="Password"> <br><br>
+    <input type="submit"> <br>
+</form>
+
+{{end}}
+
+
+
+

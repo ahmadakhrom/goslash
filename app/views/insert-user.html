@@ -1,0 +1,23 @@
+{{define "insert-user"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <p style="padding: 10px;">
+        <a href="/"> << back </a> | <a href="/user/list">list user</a>
+    </p>
+    <form action="/user/insert/store" method="post">
+        Name : <input type="text" name="name"> <br>
+        Username : <input type="text" name="username"> <br>
+        Password : <input type="password" name="password"> <br>
+        {{/*        Status :*/}}
+        <input type="hidden" name="status" value="1">
+        {{/*        Role :*/}}
+        <input type="hidden" name="role" value="3">  <br>
+        <input type="submit" value="save">
+    </form>
+    </html>
+{{end}}

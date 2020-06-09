@@ -1,0 +1,50 @@
+{{define "edit-user"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <p style="padding: 10px;">
+        <a href="/user/list"> << back </a> <br>
+        <a href="/user/insert">++new user</a> | <a href="/user/list">list user</a>
+    </p>
+    <table>
+        <form action="/user/update/{{.Id}}" method="POST">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" name="Id" value="{{.Id}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name" value="{{.Name}}"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="Username" value="{{.Username}}"></td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td><input type="number" name="Role" value="{{.Role}}" disabled></td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Status</td>
+                <td><input type="number" name="Status" value="{{.Status}}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input style="float: right" type="submit" value="Update">
+                </td>
+            </tr>
+    </table>
+
+    </form>
+    </html>
+{{end}}
