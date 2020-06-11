@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+
+}
+
+.container .header {
+    background: #34495e;
+
+}
+
+.navigation {
+
+}
+
+.navigation ul {
+
+}
+
+.navigation ul li {
+
+}
+
+.main-content {
+
+}
+
+.main-content .article {
+
+}
+
+.main-content .sidebar {
+
+}
+
+.footer {
+
+}
+

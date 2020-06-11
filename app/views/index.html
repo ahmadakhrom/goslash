@@ -1,41 +1,409 @@
-{{define "index"}}
+    {{define "index"}}
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Title</title>
-    </head>
-    <body>
-    <p style="padding: 10px">List of good things</p>
-    <ol>
-        <li><a href="/user/list">Crud Gorm</a></li>
-        <li><a href="/login">Login<small> (basic auth, validator v9, jwt)</small></a></li>
-        <li><a href="/user/upload-data">Upload data</a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
-    </ol>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: sans-serif;
+            }
+
+            .jumbotron {
+                background: #FAD02E;
+                border-radius: unset;
+                margin-bottom: 0px;
+            }
+
+            .jumbotron h1 {
+                text-align: center;
+            }
+
+            header {
+                display: inline;
+            }
+
+            nav {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                background-color: #EAF0F1;
+            }
+
+            nav li {;
+                display: inline;
+                list-style-type: none;
+                margin-right: 20px;
+            }
+
+            nav a {
+
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .flex-container-column {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                min-width: 320px;
+                margin: 0 auto;
+                margin-bottom: 200px;
+                text-align: right;
+
+            }
+
+            .flex-container-column .calculatedNumberDisplay {
+                width: 100%;
+                height: 100px;
+                padding: 20px 10px 20px;
+                background-color: #333333;
+                border: 1px solid black;
+                font-size: 2em;
+                color: white;
+            }
+
+            .flex-container-row {
+                display: flex;
+            }
+
+            .flex-container-row .button {
+                flex-basis: 25%;
+                font-size: 1em;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid deeppink;
+                background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+                cursor: pointer;
+            }
+
+            .flex-container-row .button:hover {
+                background: greenyellow;
+            }
+
+            .flex-container-row .bgOprator {
+                background: #FAD02E;
+            }
+
+            .flex-container-row .button:hover {
+                font-weight: bold;
+            }
+
+            .doubleFlex {
+                flex: 1 1 100%;
+            }
+
+            .bgOprator {
+                background: #FAD02E;
+            }
+
+        </style>
+    </head>
+    <body id="body">
+
+
+    <header>
+        <div class="jumbotron">
+            <h1>Andy's Blog</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sejarah"></a></li>
+            <li><a href="#geografis"></a></li>
+            <li><a href="#wisata"></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="main-content">
+        <ol>
+            <li><a href="/user/list">Crud Gorm</a></li>
+            <li><a href="/login">Login<small> (basic auth, validator v9, jwt)</small></a></li>
+            <li><a href="/user/upload-data">Upload data</a></li>
+            <li><a href="/myblog">my blog's</a></li>
+            <li><a href="#"></a>Buat galeri foto with flex + scrol to top page</li>
+            <li><a href="#"></a>https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/</li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+    </div>
+
+    {{/*    <div class="shadow p-3 mb-5 bg-white rounded flex-container-column">*/}}
+    {{/*        <div class="calculatedNumberDisplay">*/}}
+    {{/*            <h1 id="displayNumber">0</h1>*/}}
+    {{/*        </div>*/}}
+    {{/*        <div class="flex-container-row">*/}}
+    {{/*            <div class="button">7</div>*/}}
+    {{/*            <div class="button">8</div>*/}}
+    {{/*            <div class="button">9</div>*/}}
+    {{/*            <div class="button bgOprator">+/-</div>*/}}
+    {{/*        </div>*/}}
+    {{/*        <div class="flex-container-row">*/}}
+    {{/*            <div class="button">4</div>*/}}
+    {{/*            <div class="button">5</div>*/}}
+    {{/*            <div class="button">6</div>*/}}
+    {{/*            <div class="button bgOprator">-</div>*/}}
+    {{/*        </div>*/}}
+    {{/*        <div class="flex-container-row">*/}}
+    {{/*            <div class="button">1</div>*/}}
+    {{/*            <div class="button">2</div>*/}}
+    {{/*            <div class="button">3</div>*/}}
+    {{/*            <div class="button bgOprator">+</div>*/}}
+    {{/*        </div>*/}}
+    {{/*        <div class="flex-container-row">*/}}
+    {{/*            <div class="button clear">CE</div>*/}}
+    {{/*            <div class="button">0</div>*/}}
+    {{/*            <div class="button bgOprator doubleFlex">=</div>*/}}
+    {{/*        </div>*/}}
+    {{/*    </div>*/}}
+
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+
+    <script>
+        /*Scroll to top when arrow up clicked BEGIN*/
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({scrollTop: 0}, "slow");
+                return false;
+            });
+
+        });
+        /*Scroll to top when arrow up clicked END*/
+    </script>
+
+    {{/*    <script>*/}}
+    {{/*        const calculator = {*/}}
+    {{/*            displayNumber: '0',*/}}
+    {{/*            operator: null,*/}}
+    {{/*            firstNumber: null,*/}}
+    {{/*            waitingForSecondNumber: false*/}}
+    {{/*        };*/}}
+
+    {{/*        function updateDisplay() {*/}}
+    {{/*            document.querySelector("#displayNumber").innerText = calculator.displayNumber;*/}}
+    {{/*        }*/}}
+
+    {{/*        function clearCalculator() {*/}}
+    {{/*            calculator.displayNumber = '0';*/}}
+    {{/*            calculator.operator = null;*/}}
+    {{/*            calculator.firstNumber = null;*/}}
+    {{/*            calculator.waitingForSecondNumber = false;*/}}
+    {{/*        }*/}}
+
+    {{/*        function inputDigit(digit) {*/}}
+    {{/*            if (calculator.waitingForSecondNumber && calculator.firstNumber === calculator.displayNumber) {*/}}
+    {{/*                calculator.displayNumber = digit;*/}}
+    {{/*            } else {*/}}
+    {{/*                if (calculator.displayNumber === '0') {*/}}
+    {{/*                    calculator.displayNumber = digit;*/}}
+    {{/*                } else {*/}}
+    {{/*                    calculator.displayNumber += digit;*/}}
+    {{/*                }*/}}
+    {{/*            }*/}}
+    {{/*        }*/}}
+
+    {{/*        function inverseNumber() {*/}}
+    {{/*            if (calculator.displayNumber === '0') {*/}}
+    {{/*                return;*/}}
+    {{/*            }*/}}
+    {{/*            calculator.displayNumber = calculator.displayNumber * -1;*/}}
+    {{/*        }*/}}
+
+    {{/*        function handleOperator(operator) {*/}}
+    {{/*            if (!calculator.waitingForSecondNumber) {*/}}
+    {{/*                calculator.operator = operator;*/}}
+    {{/*                calculator.waitingForSecondNumber = true;*/}}
+    {{/*                calculator.firstNumber = calculator.displayNumber;*/}}
+    {{/*            } else {*/}}
+    {{/*                alert('Operator sudah ditetapkan')*/}}
+    {{/*            }*/}}
+    {{/*        }*/}}
+
+    {{/*        function performCalculation() {*/}}
+    {{/*            if (calculator.firstNumber == null || calculator.operator == null) {*/}}
+    {{/*                alert("Anda belum menetapkan operator");*/}}
+    {{/*                return;*/}}
+    {{/*            }*/}}
+
+    {{/*            let result = 0;*/}}
+    {{/*            if (calculator.operator === "+") {*/}}
+    {{/*                result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);*/}}
+    {{/*            } else {*/}}
+    {{/*                result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)*/}}
+    {{/*            }*/}}
+
+    {{/*            calculator.displayNumber = result;*/}}
+    {{/*        }*/}}
+
+
+    {{/*        const buttons = document.querySelectorAll(".button");*/}}
+    {{/*        for (let button of buttons) {*/}}
+    {{/*            button.addEventListener('click', function (event) {*/}}
+
+    {{/*                // mendapatkan objek elemen yang diklik*/}}
+    {{/*                const target = event.target;*/}}
+
+    {{/*                if (target.classList.contains('clear')) {*/}}
+    {{/*                    clearCalculator();*/}}
+    {{/*                    updateDisplay();*/}}
+    {{/*                    return;*/}}
+    {{/*                }*/}}
+
+    {{/*                if (target.classList.contains('negative')) {*/}}
+    {{/*                    inverseNumber();*/}}
+    {{/*                    updateDisplay();*/}}
+    {{/*                    return;*/}}
+    {{/*                }*/}}
+
+    {{/*                if (target.classList.contains('equals')) {*/}}
+    {{/*                    performCalculation();*/}}
+    {{/*                    updateDisplay();*/}}
+    {{/*                    return;*/}}
+    {{/*                }*/}}
+
+    {{/*                if (target.classList.contains('operator')) {*/}}
+    {{/*                    handleOperator(target.innerText)*/}}
+    {{/*                    updateDisplay();*/}}
+    {{/*                    return;*/}}
+    {{/*                }*/}}
+
+    {{/*                inputDigit(target.innerText);*/}}
+    {{/*                updateDisplay()*/}}
+    {{/*            });*/}}
+    {{/*        }*/}}
+
+    {{/*    </script>*/}}
+
     </body>
     </html>
 {{end}}

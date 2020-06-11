@@ -20,10 +20,16 @@ import (
 // @Failure 404 {string} string
 // @Failure 500 {string} string
 
+func Myblog(c echo.Context) error {
+
+	return c.Render(200, "myblog", nil)
+}
+
 func Index(c echo.Context) error {
 
 	return c.Render(200, "index", nil)
 }
+
 func Login(c echo.Context) error {
 
 	return c.Render(200, "login", nil)

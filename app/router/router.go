@@ -49,6 +49,7 @@ func SetRouter() {
 			"app/views/login.html",
 			"app/views/logged/dashboard.html",
 			"app/views/upload-data.html",
+			"app/views/myapp/index.html",
 
 			//running templating
 		)).Funcs(Map),
@@ -65,6 +66,7 @@ func SetRouter() {
 	Server.GET("/", controllers.Index)
 	Server.GET("/login", controllers.Login)
 	Server.GET("/login/auth", controllers.LoginAuth)
+	Server.GET("/myblog", controllers.Myblog)
 
 	//routes users
 	route := Server.Group("/user")
